@@ -1,0 +1,2 @@
+# ViewInjector
+通过重写LayoutInflaterFactory实现视图和事件的注入
