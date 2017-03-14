@@ -3,7 +3,7 @@
 -----------
 通过重写LayoutInflaterFactory实现视图和事件的注入,性能不下于findViewById（）,且不用生成多余的代码</br>
 ### 用法</br>
-####　注入View和OnClick事件
+#### 注入View和OnClick事件
 ```java
 public class MainActivity extends AppCompatActivity {
     @InjectView(R.id.btn_1)
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-####　自定义要注入的事件</br>
+#### 自定义要注入的事件</br>
 ##### 　①定义InjectEvent接口实现</br>
 ```java
 //实现InjectEvent接口
