@@ -1,5 +1,5 @@
 # ViewInjector
-###* 简介</br>
+### 简介</br>
 -----------
 通过重写LayoutInflaterFactory实现视图和事件的注入,性能不下于findViewById（）,且不用生成多余的代码</br>
 ###* 用法</br>
