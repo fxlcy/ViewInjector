@@ -5,7 +5,7 @@
 ### 原理分析</br>
 -----------
 原理其实很简单，大家知道可以通过LayoutInflater.setFactory方法来设置一个自己的LayoutInflater.Factory来定义自己对layout xml的解析规则，不知道的同学可以看一下这篇[文章](http://www.tuicool.com/articles/uIFnYzu),而该框架的原理就是在解析xml的时候来出入view。</br></br>
-对比:
+对比:</br>
 传统findViewById:每次findViewById都得从DecorView一级一级往下找。</br>
 本框架:每解析完成一个View就去查找一下这个View是否是待注入的View（如果该View的id为0就跳过)，如果是就注入。
 
