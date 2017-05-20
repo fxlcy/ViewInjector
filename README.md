@@ -4,12 +4,14 @@
 通过重写LayoutInflaterFactory实现视图和事件的注入,性能不下于findViewById（）,且不用生成多余的代码</br>
 ### 原理分析</br>
 -----------
-原理其实很简单，大家知道可以通过LayoutInflater.setFactory方法来设置一个自己的LayoutInflater.Factory来定义自己对layout xml的解析规则，不知道的同学可以看一下这篇[文章](http://www.tuicool.com/articles/uIFnYzu),而该框架的原理就是在解析xml的时候来出入view。
-对比：
-传统findViewById:每次findViewById都得从DecorView一级一级往下找。
+原理其实很简单，大家知道可以通过LayoutInflater.setFactory方法来设置一个自己的LayoutInflater.Factory来定义自己对layout xml的解析规则，不知道的同学可以看一下这篇[文章](http://www.tuicool.com/articles/uIFnYzu),而该框架的原理就是在解析xml的时候来出入view。</br></br>
+对比:
+传统findViewById:每次findViewById都得从DecorView一级一级往下找。</br>
 本框架:每解析完成一个View就去查找一下这个View是否是待注入的View（如果该View的id为0就跳过)，如果是就注入。
 
 经过测试，对一些简单的布局，findViewById速度会快一点，但是对一些复杂的布局本框架的性能会更好.
+
+------------
 ### 用法</br>
 #### 注入View和OnClick事件
 ```java
